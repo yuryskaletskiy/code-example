@@ -1,0 +1,14 @@
+-- QUERY START
+{{#typeList}}
+SELECT * FROM {{tableName}}
+
+{{#hasWhere}}
+WHERE {{#where}} {{field}} = {{#quot}}'{{/quot}}{{eq_val}}{{#quot}}'{{/quot}}{{#comma}} AND{{/comma}} {{/where}}
+{{/hasWhere}}
+{{#orderBy}}ORDER BY {{orderBy}}{{/orderBy}}
+{{#limit}}LIMIT {{limit}}{{/limit}};
+{{/typeList}}
+{{#typeCountGroupBy}}
+    SELECT {{groupColumn}}, COUNT(*) FROM {{tableName}} GROUP BY {{groupColumn}};
+{{/typeCountGroupBy}}
+-- QUERY END

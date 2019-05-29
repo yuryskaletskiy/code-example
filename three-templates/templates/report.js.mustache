@@ -1,0 +1,8 @@
+{{#charts}}
+
+var report = CreateChart({ title: "{{title}}" }, type: "lineChart", sourceUrl: "{{sourceUrl}}" );
+{{#series}}
+report.addLine({ dataIndex:{{dataIndex}}, title: "{{title}}", color: "{{color}}" });
+{{/series}}
+report.render($("{{divId}}"));
+{{/charts}}
