@@ -1,10 +1,10 @@
-{{#isUrupinsk}}
+{{#posInUrupinsk}}
 ДОРОГОЙ КЛИЕНТ ИЗ УРЮПИНСКА! ОТПРАВЬТЕ НОМЕР СВОЕГО ЧЕКА НА
-КОРОТКИЙ НОМЕР 100 И ПОЛУЧИТЕ КОФЕВАРКУ
-{{/isUrupinsk}}
-{{#isUrupinsk}}
+КОРОТКИЙ НОМЕР 100 И ПОЛУЧИТЕ КОФЕВАРКУ.
+{{/posInUrupinsk}}
+{{^posInUrupinsk}}
 ИНФОРМАЦИЯ О ВАШИХ ПОКУПКАХ:
-{{/isUrupinsk}}
+{{/posInUrupinsk}}
 
 {{#lines}}
 #{{no}} ... {{itemtext}}: {{sumRub}} руб{{#comma}};{{/comma}}{{^comma}}.{{/comma}}
